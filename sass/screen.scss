@@ -25,26 +25,26 @@ $dark-text: #333;
         bottom: -53px;
 
         &.blue {
-            background-image: url("/images/triangle-blue-down.png");
+            background-image: url("../images/triangle-blue-down.png");
         }
         &.white {
-            background-image: url("/images/triangle-white-down.png");
+            background-image: url("../images/triangle-white-down.png");
         }
         &.green {
-            background-image: url("/images/triangle-green-down.png");
+            background-image: url("../images/triangle-green-down.png");
         }
     }
     &.up {
         top: -53px;
 
         &.blue {
-            background-image: url("/images/triangle-blue-up.png");
+            background-image: url("../images/triangle-blue-up.png");
         }
         &.white {
-            background-image: url("/images/triangle-white-up.png");
+            background-image: url("../images/triangle-white-up.png");
         }
         &.green {
-            background-image: url("/images/triangle-green-up.png");
+            background-image: url("../images/triangle-green-up.png");
         }
     }
 }
@@ -53,14 +53,14 @@ $dark-text: #333;
     position: absolute;
 
     &.blue {
-        background-image: url("/images/orb-blue.png");
+        background-image: url("../images/orb-blue.png");
         width: 110px;
         height: 104px;
         top: 0;
         left: 50px;
 
         &.fuzzy {
-            background-image: url("/images/orb-blue-fuzzy.png");
+            background-image: url("../images/orb-blue-fuzzy.png");
             width: 130px;
             height: 124px;
             top: 30px;
@@ -70,14 +70,14 @@ $dark-text: #333;
     }
 
     &.green {
-        background-image: url("/images/orb-green.png");
+        background-image: url("../images/orb-green.png");
         width: 65px;
         height: 61px;
         top: 200px;
         right: 50px;
 
         &.fuzzy {
-            background-image: url("/images/orb-green-fuzzy.png");
+            background-image: url("../images/orb-green-fuzzy.png");
             width: 85px;
             height: 81px;
             top: 180px;
@@ -99,7 +99,7 @@ header {
         margin: 0 auto;
         width: 198px;
         height: 59px;
-        background-image: url("/images/agile-orbit-logo.png");
+        background-image: url("../images/agile-orbit-logo.png");
         white-space: nowrap;
         text-indent: 100%;
         overflow: hidden;
@@ -109,7 +109,7 @@ header {
 
 .phone {
     height: 766px;
-    background-image: url("/images/phone.jpg");
+    background-image: url("../images/phone.jpg");
     background-size: cover;
     background-position: center center;
 }
@@ -139,7 +139,7 @@ header {
             position: absolute;
             top: -62px;
             right: -30px;
-            background-image: url("/images/astro-head.png");
+            background-image: url("../images/astro-head.png");
             width: 359px;
             height: 366px;
         }
@@ -148,7 +148,7 @@ header {
 
 .what-is-agile {
     height: 687px;
-    background-image: url("/images/laptop.jpg");
+    background-image: url("../images/laptop.jpg");
     background-size: cover;
     background-position: center center;
     overflow: hidden;
@@ -183,7 +183,7 @@ header {
         top: -30px;
         right: -155px;
         margin: 0 50%;
-        background-image: url("/images/orbit.png");
+        background-image: url("../images/orbit.png");
         width: 310px;
         height: 298px;
     }
@@ -216,7 +216,7 @@ header {
         font-size: 90px;
         text-align: center;
         text-transform: uppercase;
-        background-image: url("/images/satellite.png");
+        background-image: url("../images/satellite.png");
         background-position: center center;
         background-repeat: no-repeat;
     }
@@ -241,7 +241,7 @@ header {
             position: absolute;
             top: -50px;
             left: -227px;
-            background-image: url("/images/java-orbit.png");
+            background-image: url("../images/java-orbit.png");
             width: 202px;
             height: 261px;
         }
@@ -313,31 +313,31 @@ header {
     }
 
     .grails {
-        background-image: url("/images/grails.png");
+        background-image: url("../images/grails.png");
     }
     .groovy {
-        background-image: url("/images/groovy.png");
+        background-image: url("../images/groovy.png");
     }
     .java {
-        background-image: url("/images/java.png");
+        background-image: url("../images/java.png");
     }
     .ios {
-        background-image: url("/images/apple.png");
+        background-image: url("../images/apple.png");
     }
     .android {
-        background-image: url("/images/android.png");
+        background-image: url("../images/android.png");
     }
     .phone-gap {
-        background-image: url("/images/phone-gap.png");
+        background-image: url("../images/phone-gap.png");
     }
     .chef {
-        background-image: url("/images/chef.png");
+        background-image: url("../images/chef.png");
     }
     .git {
-        background-image: url("/images/git.png");
+        background-image: url("../images/git.png");
     }
     .jeeves {
-        background-image: url("/images/jeeves.png");
+        background-image: url("../images/jeeves.png");
     }
 }
 
@@ -357,7 +357,7 @@ header {
     }
 
     h4 {
-        background-image: url("/images/headshot.jpg");
+        background-image: url("../images/headshot.jpg");
         width: 251px;
         height: 251px;
         white-space: nowrap;
@@ -438,7 +438,7 @@ footer {
             right: 0;
             content: "";
             position: absolute;
-            background-image: url("/images/telescope.png");
+            background-image: url("../images/telescope.png");
             width: 176px;
             height: 158px;
         }
