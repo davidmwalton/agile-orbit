@@ -89,10 +89,24 @@ $dark-text: #333;
 
 
 header {
-    position: relative;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 39px;
     padding: 16px 0 0;
     background-color: $blue;
+    -webkit-transition: height 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: height 0.3s;
+
+    &.collapsed {
+        height: 0;
+
+        h1 {
+            margin: 280px auto 0;
+        }
+    }
 
     h1 {
         position: relative;
@@ -103,19 +117,47 @@ header {
         white-space: nowrap;
         text-indent: 100%;
         overflow: hidden;
+        -webkit-transition: margin 0.2s; /* For Safari 3.1 to 6.0 */
+        transition: margin 0.2s;
     }
 
 }
 
 .phone {
+    z-index: -1;
+    position: fixed;
     height: 766px;
+    top: 0;
+    left: 0;
+    right: 0;
     background-image: url("../images/phone.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center 0;
+    -webkit-transition: top 0s; /* For Safari 3.1 to 6.0 */
+    transition: top 0s;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0);
+        -webkit-transition: background-color 0.3s; /* For Safari 3.1 to 6.0 */
+        transition: background-color 0.3s;
+    }
+
+    &.shaded {
+        &:after {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
 }
 
 .bring-to-life {
     position: relative;
+    margin: 766px 0 0;
     background-color: $blue;
     padding: 25px 0;
 
@@ -147,6 +189,8 @@ header {
 }
 
 .what-is-agile {
+    position: relative;
+    z-index: -1;
     height: 687px;
     background-image: url("../images/laptop.jpg");
     background-size: cover;
@@ -176,6 +220,7 @@ header {
 .atoms {
     position: relative;
     height: 236px;
+    background-color: $white;
 
     &:after {
         content: "";
@@ -190,6 +235,8 @@ header {
 }
 
 .technology {
+    position: relative;
+    z-index: -1;
     background-color: $dark-gray;
     height: 875px;
     overflow: hidden;
@@ -342,6 +389,8 @@ header {
 }
 
 .about-us {
+    position: relative;
+    z-index: -1;
     background-color: $dark-gray;
     overflow: hidden;
     padding: 0 0 74px;
