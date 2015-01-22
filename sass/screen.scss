@@ -97,13 +97,17 @@ header {
     height: 39px;
     padding: 16px 0 0;
     background-color: $blue;
-    -webkit-transition: height 0.3s; /* For Safari 3.1 to 6.0 */
-    transition: height 0.3s;
+    -webkit-transition: top 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: top 0.3s;
 
     &.collapsed {
-        height: 0;
+        top: -76px;
 
         h1 {
+            // dimensions: 667x187, height aspect ratio: 28.04%
+            width: 60%;
+            height: 0;
+            padding-bottom: 16.82%;
             margin: 280px auto 0;
         }
     }
@@ -114,11 +118,13 @@ header {
         width: 198px;
         height: 59px;
         background-image: url("../images/agile-orbit-logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
         white-space: nowrap;
         text-indent: 100%;
         overflow: hidden;
-        -webkit-transition: margin 0.2s; /* For Safari 3.1 to 6.0 */
-        transition: margin 0.2s;
+        -webkit-transition: margin 0.2s, padding 0.2s, width 0.2s, height 0.2s; /* For Safari 3.1 to 6.0 */
+        transition: margin 0.2s, padding 0.2s, width 0.2s, height 0.2s;
     }
 
 }

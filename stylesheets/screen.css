@@ -158,34 +158,39 @@ header {
   height: 39px;
   padding: 16px 0 0;
   background-color: #0496d2;
-  -webkit-transition: height 0.3s;
+  -webkit-transition: top 0.3s;
   /* For Safari 3.1 to 6.0 */
-  transition: height 0.3s;
+  transition: top 0.3s;
 }
 /* line 103, ../sass/screen.scss */
 header.collapsed {
-  height: 0;
+  top: -76px;
 }
 /* line 106, ../sass/screen.scss */
 header.collapsed h1 {
+  width: 60%;
+  height: 0;
+  padding-bottom: 16.82%;
   margin: 280px auto 0;
 }
-/* line 111, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 header h1 {
   position: relative;
   margin: 0 auto;
   width: 198px;
   height: 59px;
   background-image: url("../images/agile-orbit-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   white-space: nowrap;
   text-indent: 100%;
   overflow: hidden;
-  -webkit-transition: margin 0.2s;
+  -webkit-transition: margin 0.2s, padding 0.2s, width 0.2s, height 0.2s;
   /* For Safari 3.1 to 6.0 */
-  transition: margin 0.2s;
+  transition: margin 0.2s, padding 0.2s, width 0.2s, height 0.2s;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .phone {
   z-index: -1;
   position: fixed;
@@ -200,7 +205,7 @@ header h1 {
   /* For Safari 3.1 to 6.0  */
   transition: top 0s;
 }
-/* line 139, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .phone:after {
   content: "";
   position: absolute;
@@ -213,19 +218,19 @@ header h1 {
   /* For Safari 3.1 to 6.0 */
   transition: background-color 0.3s;
 }
-/* line 152, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .phone.shaded:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .bring-to-life {
   position: relative;
   margin: 766px 0 0;
   background-color: #0496d2;
   padding: 25px 0;
 }
-/* line 164, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .bring-to-life h2 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
@@ -235,13 +240,13 @@ header h1 {
   margin: 0 auto;
   position: relative;
 }
-/* line 173, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .bring-to-life h2 strong {
   font-weight: 300;
   color: #fff;
   font-size: 42px;
 }
-/* line 179, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .bring-to-life h2:after {
   content: "";
   position: absolute;
@@ -252,7 +257,7 @@ header h1 {
   height: 366px;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .what-is-agile {
   position: relative;
   z-index: -1;
@@ -262,7 +267,7 @@ header h1 {
   background-position: center center;
   overflow: hidden;
 }
-/* line 200, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .what-is-agile h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -271,7 +276,7 @@ header h1 {
   margin: 160px auto 0;
   width: 460px;
 }
-/* line 209, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .what-is-agile p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -282,13 +287,13 @@ header h1 {
   line-height: 1.3;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .atoms {
   position: relative;
   height: 236px;
   background-color: #fff;
 }
-/* line 225, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .atoms:after {
   content: "";
   position: absolute;
@@ -300,7 +305,7 @@ header h1 {
   height: 298px;
 }
 
-/* line 237, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .technology {
   position: relative;
   z-index: -1;
@@ -309,7 +314,7 @@ header h1 {
   overflow: hidden;
   padding: 200px 0 0;
 }
-/* line 245, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .technology p {
   width: 700px;
   margin: 12px auto;
@@ -319,7 +324,7 @@ header h1 {
   font-weight: 100;
   line-height: 1.3;
 }
-/* line 255, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .technology h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -336,12 +341,12 @@ header h1 {
   background-repeat: no-repeat;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 .development {
   position: relative;
   background-color: #6cb520;
 }
-/* line 276, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .development h3 {
   position: relative;
   margin: 0 0 0 50%;
@@ -352,7 +357,7 @@ header h1 {
   color: #fff;
   font-size: 32px;
 }
-/* line 286, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 .development h3:after {
   content: "";
   position: absolute;
@@ -362,7 +367,7 @@ header h1 {
   width: 202px;
   height: 261px;
 }
-/* line 297, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .development p {
   position: relative;
   margin: 30px 0 0 50%;
@@ -375,12 +380,12 @@ header h1 {
   line-height: 1.3;
 }
 
-/* line 310, ../sass/screen.scss */
+/* line 316, ../sass/screen.scss */
 .web-applications {
   position: relative;
   padding: 130px 0 77px;
 }
-/* line 314, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 .web-applications h3 {
   position: relative;
   margin: 0 auto;
@@ -391,7 +396,7 @@ header h1 {
   color: #333;
   font-size: 38px;
 }
-/* line 325, ../sass/screen.scss */
+/* line 331, ../sass/screen.scss */
 .web-applications p {
   font-family: MyriadPro, sans-serif;
   color: #333;
@@ -401,24 +406,24 @@ header h1 {
   width: 700px;
   margin: 30px auto 0;
 }
-/* line 335, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .web-applications ul {
   overflow: hidden;
   width: 900px;
   margin: 30px auto;
 }
-/* line 340, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 .web-applications ul li {
   float: left;
   width: 300px;
 }
-/* line 345, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .web-applications ul p {
   width: auto;
   margin: 0 30px;
   text-align: center;
 }
-/* line 352, ../sass/screen.scss */
+/* line 358, ../sass/screen.scss */
 .web-applications h4 {
   background-repeat: no-repeat;
   background-position: center center;
@@ -428,44 +433,44 @@ header h1 {
   text-indent: 100%;
   overflow: hidden;
 }
-/* line 362, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 .web-applications .grails {
   background-image: url("../images/grails.png");
 }
-/* line 365, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 .web-applications .groovy {
   background-image: url("../images/groovy.png");
 }
-/* line 368, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 .web-applications .java {
   background-image: url("../images/java.png");
 }
-/* line 371, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 .web-applications .ios {
   background-image: url("../images/apple.png");
 }
-/* line 374, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .web-applications .android {
   background-image: url("../images/android.png");
 }
-/* line 377, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 .web-applications .phone-gap {
   background-image: url("../images/phone-gap.png");
 }
-/* line 380, ../sass/screen.scss */
+/* line 386, ../sass/screen.scss */
 .web-applications .chef {
   background-image: url("../images/chef.png");
 }
-/* line 383, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .web-applications .git {
   background-image: url("../images/git.png");
 }
-/* line 386, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 .web-applications .jeeves {
   background-image: url("../images/jeeves.png");
 }
 
-/* line 391, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 .about-us {
   position: relative;
   z-index: -1;
@@ -473,7 +478,7 @@ header h1 {
   overflow: hidden;
   padding: 0 0 74px;
 }
-/* line 398, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 .about-us h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -483,7 +488,7 @@ header h1 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 408, ../sass/screen.scss */
+/* line 414, ../sass/screen.scss */
 .about-us h4 {
   background-image: url("../images/headshot.jpg");
   width: 251px;
@@ -495,27 +500,27 @@ header h1 {
   top: 0;
   right: 0;
 }
-/* line 420, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 .about-us ul {
   position: relative;
   overflow: hidden;
   width: 900px;
   margin: 0 auto;
 }
-/* line 427, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .about-us li {
   position: relative;
   margin: 0 0 34px;
 }
-/* line 431, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .about-us li:nth-child(2) {
   margin: 0 0 34px 275px;
 }
-/* line 434, ../sass/screen.scss */
+/* line 440, ../sass/screen.scss */
 .about-us li:nth-child(2) h4 {
   left: -275px;
 }
-/* line 440, ../sass/screen.scss */
+/* line 446, ../sass/screen.scss */
 .about-us p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -524,7 +529,7 @@ header h1 {
   font-size: 24px;
   width: 625px;
 }
-/* line 449, ../sass/screen.scss */
+/* line 455, ../sass/screen.scss */
 .about-us a {
   display: block;
   font-family: 'Advent Pro', sans-serif;
@@ -535,12 +540,12 @@ header h1 {
   width: 625px;
 }
 
-/* line 460, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 footer {
   position: relative;
   padding: 35px 0 75px;
 }
-/* line 464, ../sass/screen.scss */
+/* line 470, ../sass/screen.scss */
 footer h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -550,7 +555,7 @@ footer h3 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 474, ../sass/screen.scss */
+/* line 480, ../sass/screen.scss */
 footer p {
   position: relative;
   font-family: MyriadPro, sans-serif;
@@ -562,7 +567,7 @@ footer p {
   padding: 0 190px 0 0;
   margin: 0 auto 35px;
 }
-/* line 485, ../sass/screen.scss */
+/* line 491, ../sass/screen.scss */
 footer p:after {
   top: 55px;
   right: 0;
@@ -572,19 +577,19 @@ footer p:after {
   width: 176px;
   height: 158px;
 }
-/* line 496, ../sass/screen.scss */
+/* line 502, ../sass/screen.scss */
 footer ul {
   width: 830px;
   margin: 0 auto;
 }
-/* line 501, ../sass/screen.scss */
+/* line 507, ../sass/screen.scss */
 footer li {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
   color: #333;
   font-size: 42px;
 }
-/* line 507, ../sass/screen.scss */
+/* line 513, ../sass/screen.scss */
 footer li span {
   display: inline-block;
   width: 125px;
