@@ -197,7 +197,7 @@ header h1 {
   background-size: cover;
   background-position: center 0;
   -webkit-transition: top 0s;
-  /* For Safari 3.1 to 6.0 */
+  /* For Safari 3.1 to 6.0  */
   transition: top 0s;
 }
 /* line 139, ../sass/screen.scss */
