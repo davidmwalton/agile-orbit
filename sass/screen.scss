@@ -7,6 +7,7 @@
 @import url(http://fonts.googleapis.com/css?family=Advent+Pro:700,300);
 
 $blue: #0496d2;
+$lighter-blue: #1e82b5;
 $dark-gray: #302b30;
 $bright-green: #6bfa09;
 $green: #6cb520;
@@ -51,46 +52,39 @@ $dark-text: #333;
 
 .orb {
     position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     &.blue {
         background-image: url("../images/orb-blue.png");
-        width: 110px;
-        height: 104px;
-        top: 0;
-        left: 50px;
 
         &.fuzzy {
             background-image: url("../images/orb-blue-fuzzy.png");
-            width: 130px;
-            height: 124px;
-            top: 30px;
-            right: 400px;
-            left: auto;
         }
     }
 
     &.green {
         background-image: url("../images/orb-green.png");
-        width: 65px;
-        height: 61px;
-        top: 200px;
-        right: 50px;
 
         &.fuzzy {
             background-image: url("../images/orb-green-fuzzy.png");
-            width: 85px;
-            height: 81px;
-            top: 180px;
-            left: 100px;
-            right: auto;
         }
+    }
+
+    &.reversed {
+        -moz-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        transform: scaleX(-1);
+        -ms-filter: fliph; /*IE*/
+        filter: fliph;
     }
 }
 
 
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -127,10 +121,35 @@ header {
         transition: margin 0.2s, padding 0.2s, width 0.2s, height 0.2s;
     }
 
+    nav {
+        position: absolute;
+        top: 43px;
+        left: 50%;
+        width: 620px;
+        margin: 0 0 0 -310px;
+
+        a {
+            display: block;
+            float: left;
+            margin: 0 25px 0 0;
+            font-family: MyriadPro, sans-serif;
+            color: $white;
+            font-size: 13px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 100;
+
+            &.right {
+                float: right;
+                margin: 0 0 0 25px;
+            }
+        }
+    }
+
 }
 
 .phone {
-    z-index: -1;
+    z-index: 0;
     position: fixed;
     height: 766px;
     top: 0;
@@ -163,6 +182,7 @@ header {
 
 .bring-to-life {
     position: relative;
+    z-index: 1;
     margin: 766px 0 0;
     background-color: $blue;
     padding: 25px 0;
@@ -196,7 +216,7 @@ header {
 
 .what-is-agile {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     height: 687px;
     background-image: url("../images/laptop.jpg");
     background-size: cover;
@@ -225,6 +245,7 @@ header {
 
 .atoms {
     position: relative;
+    z-index: 1;
     height: 236px;
     background-color: $white;
 
@@ -242,8 +263,8 @@ header {
 
 .technology {
     position: relative;
-    z-index: -1;
-    background-color: $dark-gray;
+    z-index: 0;
+    background-color: $lighter-blue;
     height: 875px;
     overflow: hidden;
     padding: 200px 0 0;
@@ -315,6 +336,7 @@ header {
 
 .web-applications {
     position: relative;
+    z-index: 1;
     padding: 130px 0 77px;
 
     h3 {
@@ -396,7 +418,7 @@ header {
 
 .about-us {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     background-color: $dark-gray;
     overflow: hidden;
     padding: 0 0 74px;

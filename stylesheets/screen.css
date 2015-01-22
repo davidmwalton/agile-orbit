@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 .wedge {
   position: absolute;
   right: 0;
@@ -76,82 +76,76 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 53px;
   background-size: 100% 100%;
 }
-/* line 24, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .wedge.down {
   bottom: -53px;
 }
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .wedge.down.blue {
   background-image: url("../images/triangle-blue-down.png");
 }
-/* line 30, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 .wedge.down.white {
   background-image: url("../images/triangle-white-down.png");
 }
-/* line 33, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .wedge.down.green {
   background-image: url("../images/triangle-green-down.png");
 }
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .wedge.up {
   top: -53px;
 }
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .wedge.up.blue {
   background-image: url("../images/triangle-blue-up.png");
 }
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .wedge.up.white {
   background-image: url("../images/triangle-white-up.png");
 }
-/* line 46, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .wedge.up.green {
   background-image: url("../images/triangle-green-up.png");
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .orb {
   position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-/* line 55, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 .orb.blue {
   background-image: url("../images/orb-blue.png");
-  width: 110px;
-  height: 104px;
-  top: 0;
-  left: 50px;
 }
-/* line 62, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .orb.blue.fuzzy {
   background-image: url("../images/orb-blue-fuzzy.png");
-  width: 130px;
-  height: 124px;
-  top: 30px;
-  right: 400px;
-  left: auto;
 }
-/* line 72, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .orb.green {
   background-image: url("../images/orb-green.png");
-  width: 65px;
-  height: 61px;
-  top: 200px;
-  right: 50px;
 }
-/* line 79, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .orb.green.fuzzy {
   background-image: url("../images/orb-green-fuzzy.png");
-  width: 85px;
-  height: 81px;
-  top: 180px;
-  left: 100px;
-  right: auto;
+}
+/* line 74, ../sass/screen.scss */
+.orb.reversed {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  /*IE*/
+  filter: fliph;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
@@ -162,18 +156,18 @@ header {
   /* For Safari 3.1 to 6.0 */
   transition: top 0.3s;
 }
-/* line 103, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 header.collapsed {
   top: -76px;
 }
-/* line 106, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 header.collapsed h1 {
   width: 60%;
   height: 0;
   padding-bottom: 16.82%;
   margin: 280px auto 0;
 }
-/* line 115, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 header h1 {
   position: relative;
   margin: 0 auto;
@@ -189,10 +183,35 @@ header h1 {
   /* For Safari 3.1 to 6.0 */
   transition: margin 0.2s, padding 0.2s, width 0.2s, height 0.2s;
 }
+/* line 124, ../sass/screen.scss */
+header nav {
+  position: absolute;
+  top: 43px;
+  left: 50%;
+  width: 620px;
+  margin: 0 0 0 -310px;
+}
+/* line 131, ../sass/screen.scss */
+header nav a {
+  display: block;
+  float: left;
+  margin: 0 25px 0 0;
+  font-family: MyriadPro, sans-serif;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+/* line 142, ../sass/screen.scss */
+header nav a.right {
+  float: right;
+  margin: 0 0 0 25px;
+}
 
-/* line 132, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .phone {
-  z-index: -1;
+  z-index: 0;
   position: fixed;
   height: 766px;
   top: 0;
@@ -205,7 +224,7 @@ header h1 {
   /* For Safari 3.1 to 6.0  */
   transition: top 0s;
 }
-/* line 145, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .phone:after {
   content: "";
   position: absolute;
@@ -218,19 +237,20 @@ header h1 {
   /* For Safari 3.1 to 6.0 */
   transition: background-color 0.3s;
 }
-/* line 158, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .phone.shaded:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .bring-to-life {
   position: relative;
+  z-index: 1;
   margin: 766px 0 0;
   background-color: #0496d2;
   padding: 25px 0;
 }
-/* line 170, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .bring-to-life h2 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
@@ -240,13 +260,13 @@ header h1 {
   margin: 0 auto;
   position: relative;
 }
-/* line 179, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .bring-to-life h2 strong {
   font-weight: 300;
   color: #fff;
   font-size: 42px;
 }
-/* line 185, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .bring-to-life h2:after {
   content: "";
   position: absolute;
@@ -257,17 +277,17 @@ header h1 {
   height: 366px;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .what-is-agile {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   height: 687px;
   background-image: url("../images/laptop.jpg");
   background-size: cover;
   background-position: center center;
   overflow: hidden;
 }
-/* line 206, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .what-is-agile h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -276,7 +296,7 @@ header h1 {
   margin: 160px auto 0;
   width: 460px;
 }
-/* line 215, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .what-is-agile p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -287,13 +307,14 @@ header h1 {
   line-height: 1.3;
 }
 
-/* line 226, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .atoms {
   position: relative;
+  z-index: 1;
   height: 236px;
   background-color: #fff;
 }
-/* line 231, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 .atoms:after {
   content: "";
   position: absolute;
@@ -305,16 +326,16 @@ header h1 {
   height: 298px;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .technology {
   position: relative;
-  z-index: -1;
-  background-color: #302b30;
+  z-index: 0;
+  background-color: #1e82b5;
   height: 875px;
   overflow: hidden;
   padding: 200px 0 0;
 }
-/* line 251, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .technology p {
   width: 700px;
   margin: 12px auto;
@@ -324,7 +345,7 @@ header h1 {
   font-weight: 100;
   line-height: 1.3;
 }
-/* line 261, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .technology h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -341,12 +362,12 @@ header h1 {
   background-repeat: no-repeat;
 }
 
-/* line 278, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .development {
   position: relative;
   background-color: #6cb520;
 }
-/* line 282, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .development h3 {
   position: relative;
   margin: 0 0 0 50%;
@@ -357,7 +378,7 @@ header h1 {
   color: #fff;
   font-size: 32px;
 }
-/* line 292, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 .development h3:after {
   content: "";
   position: absolute;
@@ -367,7 +388,7 @@ header h1 {
   width: 202px;
   height: 261px;
 }
-/* line 303, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .development p {
   position: relative;
   margin: 30px 0 0 50%;
@@ -380,12 +401,13 @@ header h1 {
   line-height: 1.3;
 }
 
-/* line 316, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .web-applications {
   position: relative;
+  z-index: 1;
   padding: 130px 0 77px;
 }
-/* line 320, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .web-applications h3 {
   position: relative;
   margin: 0 auto;
@@ -396,7 +418,7 @@ header h1 {
   color: #333;
   font-size: 38px;
 }
-/* line 331, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .web-applications p {
   font-family: MyriadPro, sans-serif;
   color: #333;
@@ -406,24 +428,24 @@ header h1 {
   width: 700px;
   margin: 30px auto 0;
 }
-/* line 341, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 .web-applications ul {
   overflow: hidden;
   width: 900px;
   margin: 30px auto;
 }
-/* line 346, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 .web-applications ul li {
   float: left;
   width: 300px;
 }
-/* line 351, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 .web-applications ul p {
   width: auto;
   margin: 0 30px;
   text-align: center;
 }
-/* line 358, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .web-applications h4 {
   background-repeat: no-repeat;
   background-position: center center;
@@ -433,52 +455,52 @@ header h1 {
   text-indent: 100%;
   overflow: hidden;
 }
-/* line 368, ../sass/screen.scss */
+/* line 390, ../sass/screen.scss */
 .web-applications .grails {
   background-image: url("../images/grails.png");
 }
-/* line 371, ../sass/screen.scss */
+/* line 393, ../sass/screen.scss */
 .web-applications .groovy {
   background-image: url("../images/groovy.png");
 }
-/* line 374, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 .web-applications .java {
   background-image: url("../images/java.png");
 }
-/* line 377, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 .web-applications .ios {
   background-image: url("../images/apple.png");
 }
-/* line 380, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 .web-applications .android {
   background-image: url("../images/android.png");
 }
-/* line 383, ../sass/screen.scss */
+/* line 405, ../sass/screen.scss */
 .web-applications .phone-gap {
   background-image: url("../images/phone-gap.png");
 }
-/* line 386, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 .web-applications .chef {
   background-image: url("../images/chef.png");
 }
-/* line 389, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .web-applications .git {
   background-image: url("../images/git.png");
 }
-/* line 392, ../sass/screen.scss */
+/* line 414, ../sass/screen.scss */
 .web-applications .jeeves {
   background-image: url("../images/jeeves.png");
 }
 
-/* line 397, ../sass/screen.scss */
+/* line 419, ../sass/screen.scss */
 .about-us {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-color: #302b30;
   overflow: hidden;
   padding: 0 0 74px;
 }
-/* line 404, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 .about-us h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -488,7 +510,7 @@ header h1 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 414, ../sass/screen.scss */
+/* line 436, ../sass/screen.scss */
 .about-us h4 {
   background-image: url("../images/headshot.jpg");
   width: 251px;
@@ -500,27 +522,27 @@ header h1 {
   top: 0;
   right: 0;
 }
-/* line 426, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 .about-us ul {
   position: relative;
   overflow: hidden;
   width: 900px;
   margin: 0 auto;
 }
-/* line 433, ../sass/screen.scss */
+/* line 455, ../sass/screen.scss */
 .about-us li {
   position: relative;
   margin: 0 0 34px;
 }
-/* line 437, ../sass/screen.scss */
+/* line 459, ../sass/screen.scss */
 .about-us li:nth-child(2) {
   margin: 0 0 34px 275px;
 }
-/* line 440, ../sass/screen.scss */
+/* line 462, ../sass/screen.scss */
 .about-us li:nth-child(2) h4 {
   left: -275px;
 }
-/* line 446, ../sass/screen.scss */
+/* line 468, ../sass/screen.scss */
 .about-us p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -529,7 +551,7 @@ header h1 {
   font-size: 24px;
   width: 625px;
 }
-/* line 455, ../sass/screen.scss */
+/* line 477, ../sass/screen.scss */
 .about-us a {
   display: block;
   font-family: 'Advent Pro', sans-serif;
@@ -540,12 +562,12 @@ header h1 {
   width: 625px;
 }
 
-/* line 466, ../sass/screen.scss */
+/* line 488, ../sass/screen.scss */
 footer {
   position: relative;
   padding: 35px 0 75px;
 }
-/* line 470, ../sass/screen.scss */
+/* line 492, ../sass/screen.scss */
 footer h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -555,7 +577,7 @@ footer h3 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 480, ../sass/screen.scss */
+/* line 502, ../sass/screen.scss */
 footer p {
   position: relative;
   font-family: MyriadPro, sans-serif;
@@ -567,7 +589,7 @@ footer p {
   padding: 0 190px 0 0;
   margin: 0 auto 35px;
 }
-/* line 491, ../sass/screen.scss */
+/* line 513, ../sass/screen.scss */
 footer p:after {
   top: 55px;
   right: 0;
@@ -577,19 +599,19 @@ footer p:after {
   width: 176px;
   height: 158px;
 }
-/* line 502, ../sass/screen.scss */
+/* line 524, ../sass/screen.scss */
 footer ul {
   width: 830px;
   margin: 0 auto;
 }
-/* line 507, ../sass/screen.scss */
+/* line 529, ../sass/screen.scss */
 footer li {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
   color: #333;
   font-size: 42px;
 }
-/* line 513, ../sass/screen.scss */
+/* line 535, ../sass/screen.scss */
 footer li span {
   display: inline-block;
   width: 125px;
