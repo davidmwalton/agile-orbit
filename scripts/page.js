@@ -252,7 +252,8 @@
     function fadeItem(scrollTop, windowHeight, item) {
         var $item = $(item),
             offset = $item.offset().top,
-            midway = offset - (windowHeight / 2),
+            halfHeight = windowHeight / 3,
+            midway = offset - (halfHeight * 2),
             opacity;
 
         if (scrollTop >= midway) {
