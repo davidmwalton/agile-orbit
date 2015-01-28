@@ -232,8 +232,8 @@
     function parallaxItem(scrollTop, windowHeight, item) {
         var $item = $(item),
             offset = $item.offset().top,
-            halfHeight = windowHeight / 2,
-            midway = offset - halfHeight,
+            halfHeight = windowHeight / 3,
+            midway = offset - (halfHeight * 2),
             top;
 
         if (scrollTop >= midway) {
