@@ -49,16 +49,19 @@
     }
 
     function addAtoms() {
-        var i, rand, div, $div, isFuzzy, width;
+        var i, rand, div, $div, isFuzzy, width, halfWidth, iIsEven, iMax, iHalf;
 
+        iMax = 16;
+        iHalf = 8;
         dom.atoms = [];
         dom.fuzzyAtoms = [];
 
-        for (i = 0; i < 10; i += 1) {
+        for (i = 0; i < iMax; i += 1) {
             div = document.createElement('div');
             $div = $(div);
             $div.addClass('orb');
 
+            iIsEven = i % 2;
             rand = Math.floor(Math.random() * 2);
 
             if (rand > 0) {
@@ -67,7 +70,11 @@
                 $div.addClass('green');
             }
 
-            rand = Math.floor(Math.random() * 2);
+            //rand = Math.floor(Math.random() * 2);
+
+            // let's make the first 10 orbs normal & the
+            // second 10 fuzzy
+            rand = i < iHalf ? 0 : 1;
 
             if (rand > 0) {
                 $div.addClass('fuzzy');
@@ -82,16 +89,26 @@
                 $div.addClass('reversed');
             }
 
-            rand = Math.floor(Math.random() * 20) + 15;
+            rand = Math.floor(Math.random() * 45) + 20;
 
             width = rand;
+            halfWidth = width / 2;
 
-            $div.css({'height': rand + '%', 'width': rand + '%'});
+            $div.css({'height': rand + 'px', 'width': rand + 'px'});
 
             //rand = Math.floor(Math.random() * dom.window.width());
-            rand = Math.floor(Math.random() * (100 - width));
 
-            $div.css('left', rand + '%');
+            if (i < iHalf) {
+                rand = Math.floor(Math.random() * 20);
+            } else {
+                rand = Math.floor(Math.random() * 50);
+            }
+
+            if (!iIsEven) {
+                rand = (100 - rand);
+            }
+
+            $div.css('left', 'calc(' + rand + '% - ' + width + 'px)');
 
             rand = Math.floor(Math.random() * 1100) + 600;
 
@@ -143,17 +160,39 @@
         parallaxAtoms();
         fadeTechnology();
         parallaxAndFadeServiceLogos();
-        parallaxAndAboutUs();
+        parallaxAndFadeAboutUs();
     }
 
     function positionWhatDoesAgileMean() {
-        var height = dom.window.height(),
-            ratio = (height / dom.window.width()) * 65,
-            marginTop = Math.floor(height * 0.1) + 100;
+        var windowHeight = dom.whatIsAgile.height(),
+            windowWidth = dom.window.width(),
+            windowRatio = windowWidth / windowHeight,
+            photoRatio = 2560 / 1600,
+            topOfScreen = 530,
+            widthOfScreen = 860,
+            width, marginTop, photoHeight;
 
-        dom.whatIsAgileCopy.css('width', ratio + '%');
-        dom.whatIsAgileHeader.css('width', ratio + '%');
-        dom.whatIsAgileHeader.css('margin', marginTop + 'px auto 0')
+        if (windowRatio <= photoRatio) {
+            // window is more "portrait-y" than photo
+            // this means 100% of the photo height is shown & will be centered on-screen, clipping
+            // the right & left edges
+
+            width = (widthOfScreen / 2560) * (photoRatio * windowHeight);
+            marginTop = (topOfScreen / 1600) * windowHeight;
+        } else {
+            // window is more "landscape-y" than photo
+            // this means the photo height is greater than the height of the view, clipping the top
+            // and bottom. width is 100%.
+
+            width = (widthOfScreen / 2560) * windowWidth;
+            photoHeight = windowWidth / photoRatio;
+            marginTop = (topOfScreen / 1600) * (photoHeight);
+            marginTop -= (photoHeight - windowHeight) / 2;
+        }
+
+        dom.whatIsAgileCopy.css('width', width + 'px');
+        dom.whatIsAgileHeader.css('width', width + 'px');
+        dom.whatIsAgileHeader.css('margin', marginTop + 'px auto 0');
     }
 
     function setMinimumHeights() {
@@ -183,7 +222,7 @@
             windowHeight = dom.window.height(),
             visibilityThreshold = atomsContainerOffset - windowHeight,
             fuzzyOffset = (scrollTop - visibilityThreshold) / 4,
-            offset = (scrollTop - visibilityThreshold) / 2;
+            offset = (scrollTop - visibilityThreshold) / 1.8;
 
         if (offset > 0) {
             $.each(dom.atoms, function (index, item) {
@@ -204,11 +243,11 @@
 
         $.each(dom.servicesLogos, function (index, item) {
             fadeItem(scrollTop, windowHeight, item);
-            parallaxItem(scrollTop, windowHeight, item);
+            parallaxItemAndStaggerChildren(scrollTop, windowHeight, item);
         });
     }
 
-    function parallaxAndAboutUs() {
+    function parallaxAndFadeAboutUs() {
         var scrollTop = dom.window.scrollTop(),
             windowHeight = dom.window.height();
 
@@ -228,6 +267,32 @@
 
         fadeItem(scrollTop, windowHeight, dom.technologyHeader);
     }
+
+    function parallaxItemAndStaggerChildren(scrollTop, windowHeight, item) {
+        var $item = $(item),
+            $children = $item.find('li'),
+            offset = $item.offset().top,
+            halfHeight = windowHeight / 3,
+            midway = offset - (halfHeight * 2),
+            top;
+
+        if (scrollTop >= midway) {
+            $item.css('top', '0');
+            $($children[1]).css('top', '0');
+            $($children[2]).css('top', '0');
+        } else {
+            top = (midway - scrollTop);
+
+            if (top > halfHeight) {
+                top = halfHeight;
+            }
+
+            $item.css('top', top + 'px');
+            $($children[1]).css('top', (top / 2) + 'px');
+            $($children[2]).css('top', top + 'px');
+        }
+    }
+
 
     function parallaxItem(scrollTop, windowHeight, item) {
         var $item = $(item),
@@ -324,6 +389,7 @@
         } else {
             dom.header.addClass('big-head');
             dom.phone.addClass('shaded');
+            dom.header.addClass('collapsed');
         }
     }
 
