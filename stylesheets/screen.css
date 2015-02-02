@@ -211,18 +211,21 @@ header nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 100;
+  -webkit-transition: color 0.3s;
+  /* For Safari 3.1 to 6.0 */
+  transition: color 0.3s;
 }
-/* line 156, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 header nav a.right {
   float: right;
   margin: 0 0 0 25px;
 }
-/* line 161, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 header nav a:hover {
   color: #302b30;
 }
 
-/* line 169, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .phone {
   z-index: 0;
   position: fixed;
@@ -237,7 +240,7 @@ header nav a:hover {
   /* For Safari 3.1 to 6.0  */
   transition: top 0s;
 }
-/* line 182, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .phone:after {
   content: "";
   position: absolute;
@@ -250,12 +253,12 @@ header nav a:hover {
   /* For Safari 3.1 to 6.0 */
   transition: background-color 0.3s;
 }
-/* line 195, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .phone.shaded:after {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .bring-to-life {
   position: relative;
   z-index: 1;
@@ -263,7 +266,7 @@ header nav a:hover {
   background-color: #0496d2;
   padding: 25px 0;
 }
-/* line 208, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .bring-to-life h2 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
@@ -273,13 +276,13 @@ header nav a:hover {
   margin: 0 auto;
   position: relative;
 }
-/* line 217, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .bring-to-life h2 strong {
   font-weight: 300;
   color: #fff;
   font-size: 42px;
 }
-/* line 223, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .bring-to-life h2:after {
   content: "";
   position: absolute;
@@ -290,14 +293,14 @@ header nav a:hover {
   height: 366px;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .what-is-agile {
   position: relative;
   z-index: 0;
   height: 687px;
   overflow: hidden;
 }
-/* line 241, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .what-is-agile div {
   position: absolute;
   top: 0;
@@ -308,7 +311,7 @@ header nav a:hover {
   background-size: cover;
   background-position: center center;
 }
-/* line 252, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .what-is-agile h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -317,7 +320,7 @@ header nav a:hover {
   margin: 160px auto 0;
   min-width: 400px;
 }
-/* line 261, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 .what-is-agile p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -328,14 +331,14 @@ header nav a:hover {
   line-height: 1.4;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .atoms {
   position: relative;
   z-index: 1;
   height: 236px;
   background-color: #fff;
 }
-/* line 278, ../sass/screen.scss */
+/* line 280, ../sass/screen.scss */
 .atoms:after {
   content: "";
   position: absolute;
@@ -347,7 +350,7 @@ header nav a:hover {
   height: 298px;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 .technology {
   position: relative;
   z-index: 0;
@@ -356,7 +359,7 @@ header nav a:hover {
   overflow: hidden;
   padding: 200px 0 0;
 }
-/* line 298, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 .technology p {
   width: 700px;
   margin: 12px auto;
@@ -366,7 +369,7 @@ header nav a:hover {
   font-weight: 100;
   line-height: 1.3;
 }
-/* line 308, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 .technology h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -383,12 +386,12 @@ header nav a:hover {
   background-repeat: no-repeat;
 }
 
-/* line 325, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 .development {
   position: relative;
   background-color: #6cb520;
 }
-/* line 329, ../sass/screen.scss */
+/* line 331, ../sass/screen.scss */
 .development h3 {
   position: relative;
   margin: 0 0 0 50%;
@@ -399,7 +402,7 @@ header nav a:hover {
   color: #fff;
   font-size: 32px;
 }
-/* line 339, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .development h3:after {
   content: "";
   position: absolute;
@@ -409,7 +412,7 @@ header nav a:hover {
   width: 202px;
   height: 261px;
 }
-/* line 350, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .development p {
   position: relative;
   margin: 30px 0 0 50%;
@@ -422,13 +425,13 @@ header nav a:hover {
   line-height: 1.3;
 }
 
-/* line 363, ../sass/screen.scss */
+/* line 365, ../sass/screen.scss */
 .web-applications {
   position: relative;
   z-index: 1;
   padding: 130px 0 77px;
 }
-/* line 368, ../sass/screen.scss */
+/* line 370, ../sass/screen.scss */
 .web-applications h3 {
   position: relative;
   margin: 0 auto;
@@ -439,7 +442,7 @@ header nav a:hover {
   color: #333;
   font-size: 38px;
 }
-/* line 379, ../sass/screen.scss */
+/* line 381, ../sass/screen.scss */
 .web-applications p {
   font-family: MyriadPro, sans-serif;
   color: #333;
@@ -449,26 +452,26 @@ header nav a:hover {
   width: 700px;
   margin: 30px auto 0;
 }
-/* line 389, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 .web-applications ul {
   overflow: hidden;
   width: 900px;
   margin: 30px auto;
   position: relative;
 }
-/* line 395, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 .web-applications ul li {
   position: relative;
   float: left;
   width: 300px;
 }
-/* line 401, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 .web-applications ul p {
   width: auto;
   margin: 0 30px;
   text-align: center;
 }
-/* line 408, ../sass/screen.scss */
+/* line 410, ../sass/screen.scss */
 .web-applications h4 {
   background-repeat: no-repeat;
   background-position: center center;
@@ -478,44 +481,44 @@ header nav a:hover {
   text-indent: 100%;
   overflow: hidden;
 }
-/* line 418, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .web-applications .grails {
   background-image: url("../images/grails.png");
 }
-/* line 421, ../sass/screen.scss */
+/* line 423, ../sass/screen.scss */
 .web-applications .groovy {
   background-image: url("../images/groovy.png");
 }
-/* line 424, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 .web-applications .java {
   background-image: url("../images/java.png");
 }
-/* line 427, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .web-applications .ios {
   background-image: url("../images/apple.png");
 }
-/* line 430, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 .web-applications .android {
   background-image: url("../images/android.png");
 }
-/* line 433, ../sass/screen.scss */
+/* line 435, ../sass/screen.scss */
 .web-applications .phone-gap {
   background-image: url("../images/phone-gap.png");
 }
-/* line 436, ../sass/screen.scss */
+/* line 438, ../sass/screen.scss */
 .web-applications .chef {
   background-image: url("../images/chef.png");
 }
-/* line 439, ../sass/screen.scss */
+/* line 441, ../sass/screen.scss */
 .web-applications .git {
   background-image: url("../images/git.png");
 }
-/* line 442, ../sass/screen.scss */
+/* line 444, ../sass/screen.scss */
 .web-applications .jeeves {
   background-image: url("../images/jeeves.png");
 }
 
-/* line 447, ../sass/screen.scss */
+/* line 449, ../sass/screen.scss */
 .about-us {
   position: relative;
   z-index: 0;
@@ -523,7 +526,7 @@ header nav a:hover {
   overflow: hidden;
   padding: 0 0 74px;
 }
-/* line 454, ../sass/screen.scss */
+/* line 456, ../sass/screen.scss */
 .about-us h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -533,7 +536,7 @@ header nav a:hover {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 464, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 .about-us h4 {
   width: 300px;
   height: 300px;
@@ -545,41 +548,41 @@ header nav a:hover {
   right: 0;
   border-radius: 10px;
 }
-/* line 476, ../sass/screen.scss */
+/* line 478, ../sass/screen.scss */
 .about-us .bobby-warner {
   background-image: url("../images/agileorbit-bobbywarner-300px.jpg");
 }
-/* line 480, ../sass/screen.scss */
+/* line 482, ../sass/screen.scss */
 .about-us .cory-tranby {
   background-image: url("../images/agileorbit-corytranby-300px.jpg");
 }
-/* line 484, ../sass/screen.scss */
+/* line 486, ../sass/screen.scss */
 .about-us .eric-helgeson {
   background-image: url("../images/agileorbit-erichelgeson-300px.jpg");
 }
-/* line 488, ../sass/screen.scss */
+/* line 490, ../sass/screen.scss */
 .about-us ul {
   position: relative;
   overflow: hidden;
   width: 900px;
   margin: 0 auto;
 }
-/* line 495, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 .about-us li {
   position: relative;
   padding: 0 0 34px;
   overflow: hidden;
   min-height: 300px;
 }
-/* line 501, ../sass/screen.scss */
+/* line 503, ../sass/screen.scss */
 .about-us li:nth-child(2) {
   padding: 0 0 34px 325px;
 }
-/* line 504, ../sass/screen.scss */
+/* line 506, ../sass/screen.scss */
 .about-us li:nth-child(2) h4 {
   left: 0;
 }
-/* line 510, ../sass/screen.scss */
+/* line 512, ../sass/screen.scss */
 .about-us p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -588,7 +591,7 @@ header nav a:hover {
   font-size: 18px;
   width: 575px;
 }
-/* line 519, ../sass/screen.scss */
+/* line 521, ../sass/screen.scss */
 .about-us a {
   display: block;
   font-family: 'Advent Pro', sans-serif;
@@ -599,12 +602,12 @@ header nav a:hover {
   width: 575px;
 }
 
-/* line 530, ../sass/screen.scss */
+/* line 532, ../sass/screen.scss */
 footer {
   position: relative;
   padding: 1px 0 0;
 }
-/* line 534, ../sass/screen.scss */
+/* line 536, ../sass/screen.scss */
 footer h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -614,7 +617,7 @@ footer h3 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 544, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 footer p {
   position: relative;
   font-family: MyriadPro, sans-serif;
@@ -626,7 +629,7 @@ footer p {
   padding: 0 190px 0 0;
   margin: 0 auto 35px;
 }
-/* line 555, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
 footer p:after {
   top: 55px;
   right: 0;
@@ -636,24 +639,24 @@ footer p:after {
   width: 176px;
   height: 158px;
 }
-/* line 566, ../sass/screen.scss */
+/* line 568, ../sass/screen.scss */
 footer ul {
   width: 830px;
   margin: 0 auto;
 }
-/* line 571, ../sass/screen.scss */
+/* line 573, ../sass/screen.scss */
 footer li {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
   color: #333;
   font-size: 42px;
 }
-/* line 577, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 footer li span {
   display: inline-block;
   width: 125px;
 }
-/* line 582, ../sass/screen.scss */
+/* line 584, ../sass/screen.scss */
 footer li a {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
@@ -663,14 +666,17 @@ footer li a {
   margin: 0 auto;
   position: relative;
   text-decoration: none;
+  -webkit-transition: color 0.3s;
+  /* For Safari 3.1 to 6.0 */
+  transition: color 0.3s;
 }
-/* line 592, ../sass/screen.scss */
+/* line 596, ../sass/screen.scss */
 footer li a:hover {
   color: #56c808;
 }
 
 @media (min-width: 915px) and (max-width: 976px) {
-  /* line 601, ../sass/screen.scss */
+  /* line 605, ../sass/screen.scss */
   .bring-to-life h2:after {
     width: 300px;
     height: 300px;
