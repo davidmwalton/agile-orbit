@@ -371,10 +371,13 @@ header nav a:hover {
 }
 /* line 310, ../sass/screen.scss */
 .technology h3 {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  margin: 0 0 0 -350px;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
   color: #fff;
-  margin: 25px auto 0;
   width: 700px;
   height: 298px;
   line-height: 298px;
@@ -386,12 +389,12 @@ header nav a:hover {
   background-repeat: no-repeat;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 .development {
   position: relative;
   background-color: #6cb520;
 }
-/* line 331, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .development h3 {
   position: relative;
   margin: 0 0 0 50%;
@@ -402,7 +405,7 @@ header nav a:hover {
   color: #fff;
   font-size: 32px;
 }
-/* line 341, ../sass/screen.scss */
+/* line 344, ../sass/screen.scss */
 .development h3:after {
   content: "";
   position: absolute;
@@ -412,7 +415,7 @@ header nav a:hover {
   width: 202px;
   height: 261px;
 }
-/* line 352, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 .development p {
   position: relative;
   margin: 30px 0 0 50%;
@@ -425,13 +428,13 @@ header nav a:hover {
   line-height: 1.3;
 }
 
-/* line 365, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 .web-applications {
   position: relative;
   z-index: 1;
   padding: 130px 0 77px;
 }
-/* line 370, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 .web-applications h3 {
   position: relative;
   margin: 0 auto;
@@ -442,7 +445,7 @@ header nav a:hover {
   color: #333;
   font-size: 38px;
 }
-/* line 381, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 .web-applications p {
   font-family: MyriadPro, sans-serif;
   color: #333;
@@ -452,26 +455,26 @@ header nav a:hover {
   width: 700px;
   margin: 30px auto 0;
 }
-/* line 391, ../sass/screen.scss */
+/* line 394, ../sass/screen.scss */
 .web-applications ul {
   overflow: hidden;
   width: 900px;
   margin: 30px auto;
   position: relative;
 }
-/* line 397, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .web-applications ul li {
   position: relative;
   float: left;
   width: 300px;
 }
-/* line 403, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 .web-applications ul p {
   width: auto;
   margin: 0 30px;
   text-align: center;
 }
-/* line 410, ../sass/screen.scss */
+/* line 413, ../sass/screen.scss */
 .web-applications h4 {
   background-repeat: no-repeat;
   background-position: center center;
@@ -481,44 +484,44 @@ header nav a:hover {
   text-indent: 100%;
   overflow: hidden;
 }
-/* line 420, ../sass/screen.scss */
+/* line 423, ../sass/screen.scss */
 .web-applications .grails {
   background-image: url("../images/grails.png");
 }
-/* line 423, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 .web-applications .groovy {
   background-image: url("../images/groovy.png");
 }
-/* line 426, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .web-applications .java {
   background-image: url("../images/java.png");
 }
-/* line 429, ../sass/screen.scss */
+/* line 432, ../sass/screen.scss */
 .web-applications .ios {
   background-image: url("../images/apple.png");
 }
-/* line 432, ../sass/screen.scss */
+/* line 435, ../sass/screen.scss */
 .web-applications .android {
   background-image: url("../images/android.png");
 }
-/* line 435, ../sass/screen.scss */
+/* line 438, ../sass/screen.scss */
 .web-applications .phone-gap {
   background-image: url("../images/phone-gap.png");
 }
-/* line 438, ../sass/screen.scss */
+/* line 441, ../sass/screen.scss */
 .web-applications .chef {
   background-image: url("../images/chef.png");
 }
-/* line 441, ../sass/screen.scss */
+/* line 444, ../sass/screen.scss */
 .web-applications .git {
   background-image: url("../images/git.png");
 }
-/* line 444, ../sass/screen.scss */
+/* line 447, ../sass/screen.scss */
 .web-applications .jeeves {
   background-image: url("../images/jeeves.png");
 }
 
-/* line 449, ../sass/screen.scss */
+/* line 452, ../sass/screen.scss */
 .about-us {
   position: relative;
   z-index: 0;
@@ -526,7 +529,7 @@ header nav a:hover {
   overflow: hidden;
   padding: 0 0 74px;
 }
-/* line 456, ../sass/screen.scss */
+/* line 459, ../sass/screen.scss */
 .about-us h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -536,7 +539,7 @@ header nav a:hover {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 466, ../sass/screen.scss */
+/* line 469, ../sass/screen.scss */
 .about-us h4 {
   width: 300px;
   height: 300px;
@@ -548,41 +551,41 @@ header nav a:hover {
   right: 0;
   border-radius: 10px;
 }
-/* line 478, ../sass/screen.scss */
+/* line 481, ../sass/screen.scss */
 .about-us .bobby-warner {
   background-image: url("../images/agileorbit-bobbywarner-300px.jpg");
 }
-/* line 482, ../sass/screen.scss */
+/* line 485, ../sass/screen.scss */
 .about-us .cory-tranby {
   background-image: url("../images/agileorbit-corytranby-300px.jpg");
 }
-/* line 486, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .about-us .eric-helgeson {
   background-image: url("../images/agileorbit-erichelgeson-300px.jpg");
 }
-/* line 490, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 .about-us ul {
   position: relative;
   overflow: hidden;
   width: 900px;
   margin: 0 auto;
 }
-/* line 497, ../sass/screen.scss */
+/* line 500, ../sass/screen.scss */
 .about-us li {
   position: relative;
   padding: 0 0 34px;
   overflow: hidden;
   min-height: 300px;
 }
-/* line 503, ../sass/screen.scss */
+/* line 506, ../sass/screen.scss */
 .about-us li:nth-child(2) {
   padding: 0 0 34px 325px;
 }
-/* line 506, ../sass/screen.scss */
+/* line 509, ../sass/screen.scss */
 .about-us li:nth-child(2) h4 {
   left: 0;
 }
-/* line 512, ../sass/screen.scss */
+/* line 515, ../sass/screen.scss */
 .about-us p {
   font-family: MyriadPro, sans-serif;
   color: #fff;
@@ -591,7 +594,7 @@ header nav a:hover {
   font-size: 18px;
   width: 575px;
 }
-/* line 521, ../sass/screen.scss */
+/* line 524, ../sass/screen.scss */
 .about-us a {
   display: block;
   font-family: 'Advent Pro', sans-serif;
@@ -602,12 +605,12 @@ header nav a:hover {
   width: 575px;
 }
 
-/* line 532, ../sass/screen.scss */
+/* line 535, ../sass/screen.scss */
 footer {
   position: relative;
   padding: 1px 0 0;
 }
-/* line 536, ../sass/screen.scss */
+/* line 539, ../sass/screen.scss */
 footer h3 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
@@ -617,7 +620,7 @@ footer h3 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 546, ../sass/screen.scss */
+/* line 549, ../sass/screen.scss */
 footer p {
   position: relative;
   font-family: MyriadPro, sans-serif;
@@ -629,7 +632,7 @@ footer p {
   padding: 0 190px 0 0;
   margin: 0 auto 35px;
 }
-/* line 557, ../sass/screen.scss */
+/* line 560, ../sass/screen.scss */
 footer p:after {
   top: 55px;
   right: 0;
@@ -639,24 +642,24 @@ footer p:after {
   width: 176px;
   height: 158px;
 }
-/* line 568, ../sass/screen.scss */
+/* line 571, ../sass/screen.scss */
 footer ul {
   width: 830px;
   margin: 0 auto;
 }
-/* line 573, ../sass/screen.scss */
+/* line 576, ../sass/screen.scss */
 footer li {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
   color: #333;
   font-size: 42px;
 }
-/* line 579, ../sass/screen.scss */
+/* line 582, ../sass/screen.scss */
 footer li span {
   display: inline-block;
   width: 125px;
 }
-/* line 584, ../sass/screen.scss */
+/* line 587, ../sass/screen.scss */
 footer li a {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 700;
@@ -670,13 +673,13 @@ footer li a {
   /* For Safari 3.1 to 6.0 */
   transition: color 0.3s;
 }
-/* line 596, ../sass/screen.scss */
+/* line 599, ../sass/screen.scss */
 footer li a:hover {
   color: #56c808;
 }
 
 @media (min-width: 915px) and (max-width: 976px) {
-  /* line 605, ../sass/screen.scss */
+  /* line 608, ../sass/screen.scss */
   .bring-to-life h2:after {
     width: 300px;
     height: 300px;
@@ -686,31 +689,226 @@ footer li a:hover {
     top: -35px;
   }
 }
-/*
 @media (max-width: 914px) {
-    header {
-        height: 229px;
+  /* line 620, ../sass/screen.scss */
+  .wedge {
+    height: 10px;
+  }
+  /* line 623, ../sass/screen.scss */
+  .wedge.down {
+    bottom: -10px;
+  }
+  /* line 626, ../sass/screen.scss */
+  .wedge.up {
+    top: -10px;
+  }
 
-        nav {
-            width: 100%;
-            top: 95px;
-            left: 0;
-            margin: 0;
+  /* line 631, ../sass/screen.scss */
+  header {
+    height: 240px;
+  }
+  /* line 634, ../sass/screen.scss */
+  header.collapsed {
+    top: -256px;
+  }
+  /* line 638, ../sass/screen.scss */
+  header nav {
+    width: 100%;
+    top: 95px;
+    left: 0;
+    margin: 0;
+  }
+  /* line 644, ../sass/screen.scss */
+  header nav a {
+    float: none;
+    font-size: 14px;
+    padding: 2px 0;
+    margin: 20px auto 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  /* line 652, ../sass/screen.scss */
+  header nav a.right {
+    float: none;
+    margin: 20px auto 0;
+  }
 
-            a {
-                float: none;
-                font-size: 14px;
-                padding: 2px 0;
-                margin: 20px auto 0;
-                text-align: center;
-                overflow: hidden;
+  /* line 661, ../sass/screen.scss */
+  .bring-to-life h2 {
+    width: auto;
+    margin: 0 10%;
+    text-align: center;
+  }
+  /* line 666, ../sass/screen.scss */
+  .bring-to-life h2:after {
+    display: none;
+  }
 
-                &.right {
-                    float: none;
-                    margin: 20px auto 0;
-                }
-            }
-        }
-    }
+  /* line 674, ../sass/screen.scss */
+  .what-is-agile h3 {
+    width: auto;
+    min-width: 0;
+    padding: 0 10%;
+  }
+  /* line 680, ../sass/screen.scss */
+  .what-is-agile p {
+    width: auto;
+    min-width: 0;
+    padding: 0 10%;
+    font-size: 16px;
+  }
+
+  /* line 688, ../sass/screen.scss */
+  .technology {
+    height: auto;
+    background-image: url("../images/satellite.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0 0 25px;
+  }
+  /* line 695, ../sass/screen.scss */
+  .technology p {
+    width: auto;
+    margin: 0 10% 25px;
+    text-align: justify;
+  }
+  /* line 701, ../sass/screen.scss */
+  .technology h3 {
+    font-size: 34px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin: 65px 10% 45px;
+    background-image: none;
+    height: auto;
+    line-height: 1;
+  }
+
+  /* line 714, ../sass/screen.scss */
+  .development {
+    padding: 285px 0 25px;
+  }
+  /* line 717, ../sass/screen.scss */
+  .development h3 {
+    width: auto;
+    left: auto;
+    margin: 0 10% 35px;
+    text-align: center;
+    line-height: 1.3;
+  }
+  /* line 724, ../sass/screen.scss */
+  .development h3:after {
+    top: -275px;
+    left: 50%;
+    margin: 0 0 0 -101px;
+  }
+  /* line 731, ../sass/screen.scss */
+  .development p {
+    margin: 0 10%;
+    width: auto;
+    left: auto;
+    text-align: center;
+  }
+
+  /* line 740, ../sass/screen.scss */
+  .web-applications h3 {
+    margin: 0 10%;
+    width: auto;
+  }
+  /* line 745, ../sass/screen.scss */
+  .web-applications p {
+    margin: 15px 10%;
+    width: auto;
+  }
+  /* line 750, ../sass/screen.scss */
+  .web-applications ul {
+    width: auto;
+    margin: 0 10%;
+  }
+  /* line 754, ../sass/screen.scss */
+  .web-applications ul li {
+    float: none;
+    width: auto;
+    margin: 15px 0;
+  }
+
+  /* line 763, ../sass/screen.scss */
+  .about-us h3 {
+    width: auto;
+    margin: 50px 10% 25px;
+    font-size: 38px;
+  }
+  /* line 769, ../sass/screen.scss */
+  .about-us h4 {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    top: auto;
+    right: auto;
+    position: relative;
+  }
+  /* line 778, ../sass/screen.scss */
+  .about-us ul {
+    width: auto;
+    margin: 0 10%;
+  }
+  /* line 783, ../sass/screen.scss */
+  .about-us li {
+    min-height: 0;
+  }
+  /* line 786, ../sass/screen.scss */
+  .about-us li:nth-child(2) {
+    padding: 0 0 34px;
+  }
+  /* line 789, ../sass/screen.scss */
+  .about-us li:nth-child(2) h4 {
+    left: auto;
+  }
+  /* line 795, ../sass/screen.scss */
+  .about-us p {
+    width: auto;
+    margin: 25px 0 0;
+  }
+  /* line 800, ../sass/screen.scss */
+  .about-us a {
+    margin: 32px 0;
+    width: auto;
+  }
+
+  /* line 807, ../sass/screen.scss */
+  footer h3 {
+    font-size: 38px;
+    margin: 50px auto 25px;
+  }
+  /* line 812, ../sass/screen.scss */
+  footer p {
+    text-align: center;
+    width: auto;
+    margin: 0 10% 25px;
+    padding: 0;
+  }
+  /* line 818, ../sass/screen.scss */
+  footer p:after {
+    display: none;
+  }
+  /* line 823, ../sass/screen.scss */
+  footer ul {
+    width: auto;
+    margin: 0 10%;
+  }
+  /* line 829, ../sass/screen.scss */
+  footer li span {
+    display: block;
+    width: auto;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+  /* line 836, ../sass/screen.scss */
+  footer li a {
+    display: block;
+    width: auto;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
 }
-*/

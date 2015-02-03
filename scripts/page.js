@@ -138,9 +138,15 @@
     }
 
     function onH1AnchorClicked() {
-        dom.htmlBody.animate({
-            scrollTop: 0
-        }, 400);
+        if (dom.window.scrollTop() > 0) {
+            dom.htmlBody.animate({
+                scrollTop: 0
+            }, 400);
+        } else {
+            dom.htmlBody.animate({
+                scrollTop: 50
+            }, 400);
+        }
 
         return false;
     }
@@ -188,6 +194,13 @@
             photoHeight = windowWidth / photoRatio;
             marginTop = (topOfScreen / 1600) * (photoHeight);
             marginTop -= (photoHeight - windowHeight) / 2;
+        }
+
+        if (windowWidth < 915) {
+            dom.whatIsAgileCopy.css('width', 'auto');
+            dom.whatIsAgileHeader.css('width', 'auto');
+            dom.whatIsAgileHeader.css('margin', marginTop + 'px auto 0');
+            return;
         }
 
         dom.whatIsAgileCopy.css('width', width + 'px');
@@ -242,7 +255,7 @@
             windowHeight = dom.window.height();
 
         $.each(dom.servicesLogos, function (index, item) {
-            fadeItem(scrollTop, windowHeight, item);
+            fadeItem(scrollTop, windowHeight, item, 0);
             parallaxItemAndStaggerChildren(scrollTop, windowHeight, item);
         });
     }
@@ -252,7 +265,7 @@
             windowHeight = dom.window.height();
 
         $.each(dom.aboutUsProfiles, function (index, item) {
-            fadeItem(scrollTop, windowHeight, item);
+            fadeItem(scrollTop, windowHeight, item, 0);
             parallaxItem(scrollTop, windowHeight, item);
         });
     }
@@ -262,10 +275,10 @@
             windowHeight = dom.window.height();
 
         $.each(dom.technologyCopy, function (index, item) {
-            fadeItem(scrollTop, windowHeight, item);
+            fadeItem(scrollTop, windowHeight, item, 150);
         });
 
-        fadeItem(scrollTop, windowHeight, dom.technologyHeader);
+        fadeItem(scrollTop, windowHeight, dom.technologyHeader, 150);
     }
 
     function parallaxItemAndStaggerChildren(scrollTop, windowHeight, item) {
@@ -314,23 +327,21 @@
         }
     }
 
-    function fadeItem(scrollTop, windowHeight, item) {
+    function fadeItem(scrollTop, windowHeight, item, pixelDelay) {
         var $item = $(item),
             offset = $item.offset().top,
-            halfHeight = windowHeight / 3,
-            midway = offset - (halfHeight * 2),
+            //halfHeight = windowHeight / 3,
+            halfWindowHeight = windowHeight / 2,
+            midway = offset - halfWindowHeight,
             opacity;
 
         if (scrollTop >= midway) {
             $item.css('opacity', '1');
         } else {
-            opacity = (midway - scrollTop);
+            opacity = (halfWindowHeight - ((midway - scrollTop) + pixelDelay)) / halfWindowHeight;
 
-            if (opacity > 300) {
+            if (opacity < 0) {
                 opacity = 0;
-            } else {
-                opacity = 300 - opacity;
-                opacity = opacity / 300;
             }
 
             $item.css('opacity', opacity);
@@ -341,20 +352,23 @@
         var scrollTop = dom.window.scrollTop(),
             whatIsAgileHeaderOffset = dom.whatIsAgileHeader.offset().top,
             windowHeight = dom.window.height(),
-            midway = whatIsAgileHeaderOffset - (windowHeight / 2),
+            halfWindowHeight = windowHeight / 2,
+            midway = whatIsAgileHeaderOffset - halfWindowHeight,
             opacity;
+
+        fadeItem(scrollTop, windowHeight, dom.whatIsAgileHeader, 150);
+        fadeItem(scrollTop, windowHeight, dom.whatIsAgileCopy, 150);
+
+        return;
 
         if (scrollTop >= midway) {
             dom.whatIsAgileHeader.css('opacity', '1');
             dom.whatIsAgileCopy.css('opacity', '1');
         } else {
-            opacity = (midway - scrollTop);
+            opacity = (halfWindowHeight - ((midway - scrollTop) + 150)) / halfWindowHeight;
 
-            if (opacity > 300) {
+            if (opacity < 0) {
                 opacity = 0;
-            } else {
-                opacity = 300 - opacity;
-                opacity = opacity / 300;
             }
 
             dom.whatIsAgileHeader.css('opacity', opacity);
@@ -369,10 +383,14 @@
             midway = subHeadOffset - (windowHeight / 2),
             opacity;
 
+        fadeItem(scrollTop, windowHeight, dom.subHead, 150);
+
+        return;
+
         if (scrollTop >= midway) {
             dom.subHead.css('opacity', '1');
         } else {
-            opacity = (scrollTop - 200) / midway;
+            opacity = ((scrollTop + windowHeight) - (subHeadOffset + 150)) / midway;
 
             if (opacity < 0) {
                 opacity = 0;
