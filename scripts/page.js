@@ -262,6 +262,10 @@
         dom.phone.css('min-height', minHeight + 'px');
 
         dom.bringToLife.css('margin', minHeight + 'px 0 0');
+
+        // the footer has a 1px top-padding in order to force the h3 margin to apply *within* the containing
+        // div so we take that px off the min-height
+        dom.footer.css('min-height', (minHeight - 1) + 'px');
     }
 
     function setMinimumHeights() {

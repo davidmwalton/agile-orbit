@@ -599,7 +599,7 @@ header nav a:hover {
   color: #fff;
   font-weight: 100;
   line-height: 1.3;
-  font-size: 18px;
+  font-size: 16px;
   width: 575px;
 }
 /* line 532, ../sass/screen.scss */
@@ -635,7 +635,7 @@ footer p {
   color: #333;
   font-weight: 100;
   line-height: 1.3;
-  font-size: 24px;
+  font-size: 18px;
   width: 640px;
   padding: 0 190px 0 0;
   margin: 0 auto 35px;
@@ -788,20 +788,22 @@ footer li a:hover {
   }
   /* line 714, ../sass/screen.scss */
   .what-is-agile h3 {
-    margin: 140px auto 0;
+    font-size: 28px;
+    margin: 160px auto 0;
     width: auto;
     min-width: 0;
     padding: 0 10%;
   }
-  /* line 721, ../sass/screen.scss */
+  /* line 722, ../sass/screen.scss */
   .what-is-agile p {
     width: auto;
     min-width: 0;
     padding: 0 10%;
-    font-size: 15px;
+    font-size: 14px;
+    margin: 15px 0 0;
   }
 
-  /* line 729, ../sass/screen.scss */
+  /* line 731, ../sass/screen.scss */
   .technology {
     height: auto;
     background-image: url("../images/satellite.png");
@@ -809,15 +811,15 @@ footer li a:hover {
     background-repeat: no-repeat;
     padding: 0 0 25px;
   }
-  /* line 736, ../sass/screen.scss */
+  /* line 738, ../sass/screen.scss */
   .technology p {
     width: auto;
     margin: 0 10% 25px;
     text-align: center;
   }
-  /* line 742, ../sass/screen.scss */
+  /* line 744, ../sass/screen.scss */
   .technology h3 {
-    font-size: 34px;
+    font-size: 28px;
     position: relative;
     top: auto;
     left: auto;
@@ -828,25 +830,26 @@ footer li a:hover {
     line-height: 1;
   }
 
-  /* line 755, ../sass/screen.scss */
+  /* line 757, ../sass/screen.scss */
   .development {
     padding: 285px 0 25px;
   }
-  /* line 758, ../sass/screen.scss */
+  /* line 760, ../sass/screen.scss */
   .development h3 {
+    font-size: 28px;
     width: auto;
     left: auto;
     margin: 0 10% 35px;
     text-align: center;
     line-height: 1.3;
   }
-  /* line 765, ../sass/screen.scss */
+  /* line 768, ../sass/screen.scss */
   .development h3:after {
     top: -275px;
     left: 50%;
     margin: 0 0 0 -101px;
   }
-  /* line 772, ../sass/screen.scss */
+  /* line 775, ../sass/screen.scss */
   .development p {
     margin: 0 10%;
     width: auto;
@@ -854,39 +857,41 @@ footer li a:hover {
     text-align: center;
   }
 
-  /* line 780, ../sass/screen.scss */
+  /* line 783, ../sass/screen.scss */
   .web-applications {
     padding: 50px 0 77px;
   }
-  /* line 783, ../sass/screen.scss */
+  /* line 786, ../sass/screen.scss */
   .web-applications h3 {
     margin: 0 10%;
     width: auto;
+    font-size: 28px;
   }
-  /* line 788, ../sass/screen.scss */
+  /* line 792, ../sass/screen.scss */
   .web-applications p {
     margin: 15px 10%;
     width: auto;
+    text-align: center;
   }
-  /* line 793, ../sass/screen.scss */
+  /* line 798, ../sass/screen.scss */
   .web-applications ul {
     width: auto;
     margin: 0 10%;
   }
-  /* line 797, ../sass/screen.scss */
+  /* line 802, ../sass/screen.scss */
   .web-applications ul li {
     float: none;
     width: auto;
     margin: 15px 0;
   }
 
-  /* line 806, ../sass/screen.scss */
+  /* line 811, ../sass/screen.scss */
   .about-us h3 {
     width: auto;
     margin: 50px 10% 25px;
-    font-size: 38px;
+    font-size: 28px;
   }
-  /* line 812, ../sass/screen.scss */
+  /* line 817, ../sass/screen.scss */
   .about-us h4 {
     width: 90%;
     max-width: 300px;
@@ -895,67 +900,71 @@ footer li a:hover {
     right: auto;
     position: relative;
   }
-  /* line 821, ../sass/screen.scss */
+  /* line 826, ../sass/screen.scss */
   .about-us ul {
     width: auto;
     margin: 0 10%;
   }
-  /* line 826, ../sass/screen.scss */
+  /* line 831, ../sass/screen.scss */
   .about-us li {
     min-height: 0;
   }
-  /* line 829, ../sass/screen.scss */
+  /* line 834, ../sass/screen.scss */
   .about-us li:nth-child(2) {
     padding: 0 0 34px;
   }
-  /* line 832, ../sass/screen.scss */
+  /* line 837, ../sass/screen.scss */
   .about-us li:nth-child(2) h4 {
     left: auto;
   }
-  /* line 838, ../sass/screen.scss */
+  /* line 843, ../sass/screen.scss */
   .about-us p {
     width: auto;
     margin: 25px 0 0;
   }
-  /* line 843, ../sass/screen.scss */
+  /* line 848, ../sass/screen.scss */
   .about-us a {
     margin: 32px 0;
     width: auto;
+    font-size: 28px;
   }
 
-  /* line 850, ../sass/screen.scss */
+  /* line 856, ../sass/screen.scss */
   footer h3 {
-    font-size: 38px;
+    font-size: 28px;
     margin: 50px auto 25px;
   }
-  /* line 855, ../sass/screen.scss */
+  /* line 861, ../sass/screen.scss */
   footer p {
     text-align: center;
     width: auto;
     margin: 0 10% 25px;
     padding: 0;
+    font-size: 16px;
   }
-  /* line 861, ../sass/screen.scss */
+  /* line 868, ../sass/screen.scss */
   footer p:after {
     display: none;
   }
-  /* line 866, ../sass/screen.scss */
+  /* line 873, ../sass/screen.scss */
   footer ul {
     width: auto;
     margin: 0 10%;
   }
-  /* line 872, ../sass/screen.scss */
+  /* line 879, ../sass/screen.scss */
   footer li span {
     display: block;
     width: auto;
     margin: 0 auto 10px;
     text-align: center;
+    font-size: 24px;
   }
-  /* line 879, ../sass/screen.scss */
+  /* line 887, ../sass/screen.scss */
   footer li a {
     display: block;
     width: auto;
     margin: 0 auto 10px;
     text-align: center;
+    font-size: 18px;
   }
 }
