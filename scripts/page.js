@@ -36,6 +36,7 @@
         dom.h1Anchor = dom.h1.find('a');
         dom.phone = $('.phone');
         dom.bringToLife = $('.bring-to-life');
+        dom.footer = $('footer');
     }
 
     function attachMobileHandlers() {

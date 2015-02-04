@@ -859,7 +859,7 @@ footer li a:hover {
 
   /* line 783, ../sass/screen.scss */
   .web-applications {
-    padding: 50px 0 77px;
+    padding: 50px 0 25px;
   }
   /* line 786, ../sass/screen.scss */
   .web-applications h3 {
@@ -876,7 +876,7 @@ footer li a:hover {
   /* line 798, ../sass/screen.scss */
   .web-applications ul {
     width: auto;
-    margin: 0 10%;
+    margin: 0 10% 30px;
   }
   /* line 802, ../sass/screen.scss */
   .web-applications ul li {
