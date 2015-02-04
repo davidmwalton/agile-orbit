@@ -41,7 +41,7 @@
     function attachMobileHandlers() {
         dom.window.on('scroll', onMobileScroll);
         $.each(dom.navElements, function (index, item) {
-            $(item).on('click', onNavElementClicked);
+            $(item).on('click', onMobileNavElementClicked);
         });
         dom.h1Anchor.on('click', onH1AnchorClicked);
     }
@@ -155,6 +155,18 @@
 
             dom.atomsContainer.append($div);
         }
+    }
+
+    function onMobileNavElementClicked() {
+        var $this = $(this),
+            href = $this.attr('href'),
+            $destination = $(href);
+
+        dom.htmlBody.animate({
+            scrollTop: $destination.offset().top - 100
+        }, 400);
+
+        return false;
     }
 
     function onNavElementClicked() {
