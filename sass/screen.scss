@@ -125,7 +125,7 @@ header {
             right: 0;
             bottom: 0;
 
-            background-image: url("../images/agile-orbit-logo.png");
+            background-image: url("../images/AgileOrbit_Logo.svg");
             background-size: contain;
             background-repeat: no-repeat;
             white-space: nowrap;
@@ -133,6 +133,14 @@ header {
             overflow: hidden;
 
         }
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
     }
 
     nav {
@@ -629,23 +637,41 @@ footer {
     }
 
     header {
-        height: 240px;
+        height: 112px;
+        padding: 6px 0 0;
 
         &.collapsed {
-            top: -256px;
+            top: -118px;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: block;
         }
 
         nav {
             width: 100%;
-            top: 95px;
+            top: 65px;
             left: 0;
             margin: 0;
+
+            div {
+                width: 50%;
+                float: left;
+
+                &.right {
+                    float: right;
+                }
+            }
 
             a {
                 float: none;
                 font-size: 14px;
                 padding: 2px 0;
-                margin: 20px auto 0;
+                margin: 0 auto 10px;
                 text-align: center;
                 overflow: hidden;
 
@@ -655,6 +681,12 @@ footer {
                 }
             }
         }
+    }
+
+    .phone {
+        position: absolute;
+        height: auto;
+        background-image: url("../images/background-1-mobileblur-mobile.jpg");
     }
 
     .bring-to-life {
@@ -670,8 +702,12 @@ footer {
     }
 
     .what-is-agile {
+        div {
+            background-image: url("../images/background-2-Coffee-mobile.jpg");
+        }
 
         h3 {
+            margin: 140px auto 0;
             width: auto;
             min-width: 0;
             padding: 0 10%;
