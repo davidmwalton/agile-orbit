@@ -175,9 +175,15 @@
             href = $this.attr('href'),
             $destination = $(href);
 
-        dom.htmlBody.animate({
-            scrollTop: $destination.offset().top
-        }, 400);
+        if (dom.window.width() < 915) {
+            dom.htmlBody.animate({
+                scrollTop: $destination.offset().top - 100
+            }, 400);
+        } else {
+            dom.htmlBody.animate({
+                scrollTop: $destination.offset().top
+            }, 400);
+        }
 
         return false;
     }
